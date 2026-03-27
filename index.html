@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Timeless Artisan | Nội Thất Gỗ Cao Cấp</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#e5e2dd",
+              "tertiary-fixed-dim": "#e4beb2",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f6f3ee",
+              "on-primary-container": "#d4ada1",
+              "on-surface-variant": "#504441",
+              "on-primary-fixed-variant": "#5d4037",
+              "secondary-fixed-dim": "#e9c176",
+              "on-secondary-fixed-variant": "#5d4201",
+              "surface-container": "#f0ede9",
+              "tertiary-fixed": "#ffdbce",
+              "on-background": "#1c1c19",
+              "tertiary-container": "#5b4137",
+              "on-surface": "#1c1c19",
+              "on-secondary-container": "#785a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#d2aea1",
+              "inverse-surface": "#31302d",
+              "surface-bright": "#fcf9f4",
+              "surface": "#fcf9f4",
+              "primary-container": "#5d4037",
+              "surface-dim": "#dcdad5",
+              "primary-fixed": "#ffdbd0",
+              "on-primary-fixed": "#2c160e",
+              "on-tertiary-fixed-variant": "#5b4137",
+              "primary-fixed-dim": "#e7bdb1",
+              "secondary-container": "#fed488",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e5e2dd",
+              "inverse-primary": "#e7bdb1",
+              "on-secondary": "#ffffff",
+              "outline": "#827470",
+              "inverse-on-surface": "#f3f0eb",
+              "background": "#fcf9f4",
+              "tertiary": "#432b22",
+              "outline-variant": "#d4c3be",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#ffdea5",
+              "secondary": "#775a19",
+              "primary": "#442a22",
+              "on-secondary-fixed": "#261900",
+              "surface-tint": "#77574d",
+              "surface-container-high": "#ebe8e3",
+              "on-tertiary-fixed": "#2b160f"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift { transition: background-color 0.3s ease; }
+        .glass-effect { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 md:px-12 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-serif text-[#442a22] dark:text-[#fcf9f4] italic font-headline">Timeless Artisan</div>
+<div class="hidden md:flex gap-10 items-center font-noto-serif font-medium tracking-tight">
+<a class="text-[#775a19] dark:text-[#d4af37] border-b-2 border-[#775a19] pb-1 transition-colors duration-300 ease-in-out" href="#">Bộ Sưu Tập</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#442a22] dark:hover:text-stone-200 transition-colors duration-300 ease-in-out" href="#">Quy Trình</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#442a22] dark:hover:text-stone-200 transition-colors duration-300 ease-in-out" href="#">Vật Liệu</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#442a22] dark:hover:text-stone-200 transition-colors duration-300 ease-in-out" href="#">Showroom</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-2.5 rounded-md font-medium hover:bg-secondary transition-all duration-300 transform active:scale-95">
+                Liên Hệ
+            </button>
+</div>
+</nav>
+<!-- SideNavBar (Consultation Anchor) -->
+<div class="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-40">
+<div class="bg-stone-50 dark:bg-stone-900 rounded-full py-4 px-2 shadow-2xl shadow-[#442a22]/10 border border-stone-200/20 flex flex-col items-center gap-4">
+<div class="flex flex-col items-center gap-1 mb-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional male interior design consultant in a stylish studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs_NL1tFweDHLEm9p8Xa3qr-CHkts_Wmc6Tc1mnx62NJf9DotSZuh8Wt8i61wMkKKgcJjgfFRw_IGbX3U_f-3z7s94aScOd1AkQQfJB3UHIGNU6kEi0ist5ZI55S14FNXSwaFd8qfQH8gH8PklIsoMTcRYrrwVCssZ3so_Dx0Mqhc59_Rnp-hbBkbYb-Ls_ay-zszBCN1TL40_8UQYG616ahisG6XTKpQ4Lz5orvdL3XDnEw28VjG7y4G8uJUtjpvr0c6kqPwZDwI"/>
+</div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Tư Vấn</span>
+</div>
+<a class="bg-[#775a19] text-white rounded-full p-3 hover:scale-110 transition-all duration-500" href="#">
+<span class="material-symbols-outlined block text-lg">call</span>
+</a>
+<a class="text-[#442a22] dark:text-stone-300 p-3 hover:scale-110 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-all duration-500" href="#">
+<span class="material-symbols-outlined block text-lg">chat</span>
+</a>
+</div>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="luxurious sunlit living room featuring high-end solid oak furniture with minimalist aesthetic and warm earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaaWs5N58w7daOlJuEbrmRFBxWFtMuIOCBmQ_vmhn53kV-A3IMhBHjYUF9hlVOVWdFGpxTTMHyUfq_QuVypp_QNmCTKRmpAhDo72bQJGDYAmSYqbx4NzSft9HtN_j5qiLxHhzquLCbMsUOk7RHt-nvwpUFfib5Gfx5QTbvjsQT44bjBHu61lds4-G1F312zt0g2X-Cx5b5n0mh6hw5e6Aj7tg9LMHDyr-rfqiWVswn33FJ7_iWMyq99iTFcYmL_5ItGwoGHsgTmFo"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-white">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1 bg-secondary/20 backdrop-blur-md border border-secondary/30 rounded-full text-secondary-fixed text-sm font-label tracking-widest uppercase mb-6">Masterpiece 2024</span>
+<h1 class="font-headline text-5xl md:text-7xl leading-tight mb-8">Nâng Tầm Không Gian Sống Với Nội Thất Gỗ Tự Nhiên Đẳng Cấp</h1>
+<p class="font-body text-lg md:text-xl text-stone-200 mb-10 max-w-xl leading-relaxed">Sự kết hợp hoàn mỹ giữa tinh hoa thảo mộc và bàn tay nghệ nhân, mang hơi thở thiên nhiên vào tâm điểm ngôi nhà bạn.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-white px-10 py-4 rounded-md font-bold text-lg hover:shadow-xl hover:shadow-secondary/20 transition-all transform hover:-translate-y-1">Khám phá bộ sưu tập</button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-white/20 transition-all">Xem Quy Trình</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<div class="h-0.5 w-12 bg-secondary mb-6"></div>
+<h2 class="font-headline text-4xl text-primary mb-4">Tuyệt Tác Nghệ Thuật Gỗ</h2>
+<p class="text-on-surface-variant text-lg">Mỗi sản phẩm là một câu chuyện về sự tỉ mỉ, từ khâu chọn phôi gỗ đến lớp hoàn thiện cuối cùng.</p>
+</div>
+<a class="text-secondary font-bold flex items-center gap-2 group" href="#">
+                        Xem tất cả sản phẩm
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Featured Product -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="relative aspect-[4/3] overflow-hidden rounded-xl bg-surface-container-low mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="elegant solid walnut dining table set in a modern minimalist dining room with soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6u7j9gIg_Vxn2Qs-hWRnU7OIBuYJG2e0zn2vN0vItXTGhxrY0t3i3eWP9n8066latOKBJm6o6mHFMoS5ecmbypiHbF69k6h-QJEQO3VwSB0r-ah-bMn3HbAspJTJ7E8yqDEr3UOphqHvqz9TxYM3ppiLJAD3FIecbvv-1QyJGJjnegRlHOHAOo8OMA5DB-DZ4gVwuXz3QvX6rKPhaKLuqQ_ib1EtdawUUFn2qi5Mfwa3nMrLWoo6dgX3L5mwzV8i5LNDFDcJLx2E"/>
+<div class="absolute top-6 left-6">
+<span class="bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-primary">Best Seller</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl text-primary mb-1">Bàn ăn Walnut Heritage</h3>
+<p class="text-stone-500">Gỗ óc chó Bắc Mỹ, sơn Inchem cao cấp</p>
+</div>
+<button class="border border-outline-variant px-6 py-2 rounded-md text-sm font-bold hover:bg-primary hover:text-white transition-colors">Chi tiết</button>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col gap-8">
+<div class="group cursor-pointer">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="contemporary deep green velvet sofa with solid oak wood legs in a stylish apartment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE3ZoArUi2dR2Qyj7Iim7rDNSdMwewQxQkPFd7NFN_aP3FS3fcJnTtoSkfPs-EcA6UurXtYTS-zftkRLrqHCK84_wlO63TxQT8VkuCKNhSad5g6-TgTixvJWwgat7Auftp9KZ-PChQf9rQeMt7aXi75y662I4KH8RpqNKu1VZVohS23oGbKKzURBJQt3UKWV03FRUvWCgtF2qDqNjyt1ipZ35BjkkC4DkrgS8fI2tYMMg9kJ4cwrTiuLPy8Wc4Duo2CIBWJUL2k80"/>
+</div>
+<div class="flex justify-between items-center">
+<h3 class="font-headline text-xl text-primary">Ghế sofa Signature</h3>
+<button class="text-secondary font-bold text-sm">Chi tiết</button>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="minimalist bedroom featuring a solid wood platform bed frame with premium linen bedding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdOYmBmUX2iJB3MKFiozP7Jh5N56vzJNLyQVSHoz1A4_UyluKjHY_Cy30aQGrXEpPEaI5x4zws2kVOFeeO_IJ17NyQOf7jyjkHs6MJCht9joKzue2ZSVZk4iaWjCHJzlScZw6an5_Yf4Yfk0AoPOXOeNZ2yWaAL5v7chdb-k3cbZoJhpyB2wic_fnlp7jnmrHNzX3-hn__XWq4xCaxuaBD_KMx-ejZ1jDnRBn250iEfzuToKxmQcdF0dc8kUNYMRn-s3LxrNvlDrg"/>
+</div>
+<div class="flex justify-between items-center">
+<h3 class="font-headline text-xl text-primary">Giường ngủ Zen</h3>
+<button class="text-secondary font-bold text-sm">Chi tiết</button>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-xl bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="large solid wood wardrobe with intricate grain details and modern sliding doors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_V3taYNdVnvmoK_KqMMTThjZxIxhnBkUxPBd9dUyyaSEbWOG41cTfFAU7Bu3qX07CfAhvfbJSauEQhwjHyuXCAewRxumwqLyKzyUZp_tbKtfOdYFs3SWh6cdzSDKSbF8EIxft9W6ymp7v_Ni6ykX8XWygsWhdSoarA410zupdFAGik-uHNhv-d6DN0T-42Oz28Acrsm8GC1N1s0v2-oX3K2J6uDEhXkAqErNPBV07qIujbKYR5oerXhnj7w6JAZ13SYdkgwiP9Xo"/>
+</div>
+<h3 class="font-headline text-xl text-primary">Tủ quần áo Grand</h3>
+<p class="text-stone-500 mb-4 text-sm">Thiết kế module thông minh</p>
+<button class="w-full py-3 border border-outline-variant rounded-md font-bold hover:bg-stone-50">Chi tiết</button>
+</div>
+<div class="md:col-span-8 relative overflow-hidden rounded-xl bg-primary flex flex-col md:flex-row items-center p-12 text-white">
+<div class="relative z-10 md:w-1/2">
+<h3 class="font-headline text-3xl mb-4">Thiết kế theo yêu cầu?</h3>
+<p class="text-stone-300 mb-8">Chúng tôi cá nhân hóa từng chi tiết để phù hợp tuyệt đối với phong cách riêng của bạn.</p>
+<button class="bg-secondary px-8 py-3 rounded-md font-bold">Đặt lịch tư vấn KTS</button>
+</div>
+<div class="md:w-1/2 mt-8 md:mt-0">
+<img class="rounded-lg shadow-2xl rotate-3" data-alt="interior designer sketching custom furniture plans on a wooden desk with material samples" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh3jF5gsn36g_WpWJ89vJersDqEUNt_Q680-NxkgROIHfAMV5qSfB3IHIm6zDI__Ma48uEJqSOQoZ8iaRFx7bwUCRpXaIuZ_7mgmNMvOyikwfU3ooqrf6k6bGiDCUgScQXFRhagd5nxBfzwVQjmdDD-LK_P_A1GHXObj1Bac0NZIy8bYoY2Xs0c7RnSV4uuKYi6mUrzYJBrvcfwp00WmssbTBjX_CUDW4llm6Ihni7fZrLQrlbZ_50gkMrscOT9z1DZ6VbfuZaD2Q"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+<h2 class="font-headline text-4xl text-primary mb-16">Tại Sao Chọn Timeless Artisan?</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-secondary mb-6 shadow-sm">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">forest</span>
+</div>
+<h4 class="font-headline text-xl mb-3">Chất liệu tuyển chọn</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Gỗ Sồi, Óc Chó nhập khẩu 100% từ Bắc Mỹ và Châu Âu với chứng chỉ bền vững.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-secondary mb-6 shadow-sm">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">hand_gesture</span>
+</div>
+<h4 class="font-headline text-xl mb-3">Nghệ nhân tay nghề cao</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Đội ngũ nghệ nhân trên 20 năm kinh nghiệm, am hiểu sâu sắc từng thớ gỗ.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-secondary mb-6 shadow-sm">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h4 class="font-headline text-xl mb-3">Độ bền vĩnh cửu</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Sử dụng kỹ thuật ghép mộng truyền thống đảm bảo kết cấu vững chắc trọn đời.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-secondary mb-6 shadow-sm">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<h4 class="font-headline text-xl mb-3">An toàn sức khỏe</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Sơn thực vật không mùi, không hóa chất độc hại, bảo vệ gia đình bạn.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="py-24 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-headline text-3xl italic text-primary leading-snug mb-8">
+                            "Nội thất của Timeless Artisan không chỉ là những món đồ, mà là hơi thở của sự sang trọng trong ngôi nhà tôi. Từng vân gỗ đều được xử lý tinh tế đến mức đáng kinh ngạc."
+                        </blockquote>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-stone-200">
+<img class="w-full h-full object-cover" data-alt="portrait of a sophisticated middle-aged man smiling, customer testimonial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtIOga97R3CjaPdvPriY_fqaj-zkWGWDbGYvrPf6-83Y2fGR1rA0fKnW18VEYlBtFtxX6wip7oKOSAKnYufPs_LxeUjNtEprcVSx5SMF1rhXqaySFkAiGTg7rbdZ2DKiB2UUj_LEfjeu_-KCiGcc97XKHtrwsCh_mvuxIzO-sOFnsReo9qKrs0AmdYFmegsTdnFXTBrwsDv8fNVePn2N7u_YOr7zEV2Gi_0PSn_SoR_Re-WSw3zLVkiOBm2iYe1aJpfBb7a1cESxs"/>
+</div>
+<div>
+<p class="font-bold text-primary">Anh Hoàng Nam</p>
+<p class="text-sm text-stone-500">Chủ biệt thự Ciputra, Hà Nội</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<img class="rounded-xl shadow-lg mt-8" data-alt="interior view of a luxury apartment living room designed with artisanal wooden furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbpPlr_40GHm127SasjTRH8u95_BsKSUC5yzgCmhdZ-ESCWh2lTrraznyvPPfCyr4qylQ5I5AUazMBuoIUQ0G8UCGMYQg2GWVGHJwvKpjngREpX_2H2MLTDM6mzsVNzArjJcykFuP8Wo_gPhLYxOPczlfM7kZYIU3BlYRpJ6k8t7C-0Y4t591NkiLuuQJLvIodDLce90C8jAUvdSgKDYo0WvGrJhgkjehEKNecp-8OPkYgnix4zCxo3jaTyCjtwbfflvFv6MEuRY0"/>
+<img class="rounded-xl shadow-lg mb-8" data-alt="close up of handcrafted wooden textures and details in a high-end interior setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJN9FDoXuyNCJsJFi7nM8GryPoWhnhoJe3GwF40MN5GkA95Q9yOPqCP7Qv-rpW7br6anvYe2zjLrK5J4yf9v-7PUzWQbUs7AwTTxRAFl4SwSmbwFrrR-6x8Z3PvzlK4YxWchUoOgiLpsLSa7HHABHoTOEYdKUIv5wsns9uSS25F70fjWpfzZ7a-wCKH9LeiLFEp_y5WS7Bqq2xqmVP81B20Md4aQVWqkicEuN2VdcEgdOWnizXQOlS8m3PAvpbmnoPXaW2vWeTwuA"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-secondary text-white p-8 rounded-2xl shadow-2xl">
+<p class="text-4xl font-headline font-bold">5.000+</p>
+<p class="text-sm font-label uppercase tracking-widest">Gia đình tin dùng</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing/Combo Section -->
+<section class="py-24 bg-surface-container-high">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl text-primary mb-4">Gói Giải Pháp Nội Thất</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Tối ưu chi phí và đồng bộ không gian với các gói combo thiết kế sẵn.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Living Room Combo -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="complete living room interior package with wooden coffee table, sofa, and shelving units" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJC_h9aTAbOF1QqDNSqivNg6a-u_-HpEu4PRa3Fgxw4KHeyo2VB94klqkcI5A9s5BwLqcP3OcBcreuih95Q6WuBzF8MTG1PvI-sakRWD_wYBQypJHP8Mek_MHKR2Yb7KXneQWVplUyZog93GL68mN7ZU01SGh1jITyMmtK_gxb1wfjhOmYEv-dng84zQ5TZjnGOTONQJjnMZV7_4lvgzfzIDPAps0VV0SFqihv14Rgspad_i-CEAWrUF2rayW222j6MmxInMiK38"/>
+</div>
+<div class="p-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline text-2xl text-primary mb-2">Combo Phòng Khách Noble</h3>
+<p class="text-stone-500 text-sm">Sofa, Bàn trà, Kệ TV, Tủ trang trí</p>
+</div>
+<div class="text-right">
+<p class="text-sm text-stone-400 line-through">120.000.000đ</p>
+<p class="text-2xl font-bold text-secondary">95.000.000đ</p>
+</div>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-stone-600">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                    Gỗ Sồi trắng Mỹ hạng 1
+                                </li>
+<li class="flex items-center gap-3 text-stone-600">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                    Thiết kế theo kích thước nhà
+                                </li>
+<li class="flex items-center gap-3 text-stone-600">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                    Vận chuyển &amp; lắp đặt miễn phí
+                                </li>
+</ul>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-md hover:bg-secondary transition-colors">Nhận báo giá chi tiết</button>
+</div>
+</div>
+<!-- Bedroom Combo -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="luxurious bedroom furniture suite including solid wood bed frame, nightstands, and dressing table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVwULJJOAyG-rjXzG2Pg-vuohfSyAmwBredniV9LzhqB1xgJuy7grO5RGmCZgJ6KWTgmQpfVWGZV8bbt_Bi5q3I1m8B_Oltqutz9PC0xVDl84jvBj0WZtwJhMITaIVMGaZg5JhPNQiOlhBBJNBZ5PyIF0r_t1brweMaxQKMfjryfzdSoGIGufO4uo3Ja9IInbi3AM3VvygpPNmDHQkjA8QoJLUyhEgTPnrsfGNIMbOkqDO-nF70PZVhnGASVC1NcQCR14GL74jb6o"/>
+</div>
+<div class="p-10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline text-2xl text-primary mb-2">Combo Phòng Ngủ Serenity</h3>
+<p class="text-stone-500 text-sm">Giường, 2 Tab đầu giường, Tủ áo, Bàn trang điểm</p>
+</div>
+<div class="text-right">
+<p class="text-sm text-stone-400 line-through">150.000.000đ</p>
+<p class="text-2xl font-bold text-secondary">118.000.000đ</p>
+</div>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-stone-600">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                    Gỗ Óc Chó (Walnut) cao cấp
+                                </li>
+<li class="flex items-center gap-3 text-stone-600">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                    Bảo hành kết cấu 10 năm
+                                </li>
+<li class="flex items-center gap-3 text-stone-600">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                                    Tư vấn phong thủy giường ngủ
+                                </li>
+</ul>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-md hover:bg-secondary transition-colors">Nhận báo giá chi tiết</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="font-headline text-4xl text-primary mb-12 text-center">Câu Hỏi Thường Gặp</h2>
+<div class="space-y-4">
+<div class="border-b border-stone-200 pb-4">
+<button class="w-full flex justify-between items-center text-left py-4 hover:text-secondary transition-colors">
+<span class="font-headline text-lg text-primary">Chính sách bảo hành tại Timeless Artisan như thế nào?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="border-b border-stone-200 pb-4">
+<button class="w-full flex justify-between items-center text-left py-4 hover:text-secondary transition-colors">
+<span class="font-headline text-lg text-primary">Thời gian sản xuất và vận chuyển mất bao lâu?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="border-b border-stone-200 pb-4">
+<button class="w-full flex justify-between items-center text-left py-4 hover:text-secondary transition-colors">
+<span class="font-headline text-lg text-primary">Làm thế nào để bảo quản gỗ tự nhiên bền đẹp theo năm tháng?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<div class="border-b border-stone-200 pb-4">
+<button class="w-full flex justify-between items-center text-left py-4 hover:text-secondary transition-colors">
+<span class="font-headline text-lg text-primary">Timeless Artisan có nhận thiết kế riêng cho căn hộ chung cư không?</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Form Section -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container">
+<img class="w-full h-full object-cover opacity-30" data-alt="warm and cozy luxury living room background with soft indirect lighting on high-end wood paneling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ3myqqJwHBKldcemEus-6BXOvvS3xGYdYnuh9a0iu-cxUz_AG6TXmPWBcISvdAKjSOKHV8aAI9u6yTTAP10Dz_B0u6709h3sBdfutg69H9SiTJ0SdRH-KgUQYbpYP_AfiGUPYtKFtXoDUcIKiVRw6CxY1-z8PhxZbVYnbRLtzNBry6Uzlqaq9O06JmeiljCPAxNLCU7mQzjKtUO5uVm3ul20nSFJ9bh5h2RS6mjhNLU7w_hCwyda5ESE0uhDQ24cqo0Xzns_Mx48"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2 text-white">
+<h2 class="font-headline text-4xl md:text-5xl mb-6">Bắt Đầu Hành Trình Kiến Tạo Tổ Ấm</h2>
+<p class="text-stone-300 text-lg mb-8 leading-relaxed">Đăng ký ngay để nhận buổi tư vấn miễn phí từ chuyên gia về phong thủy nội thất và giải pháp tối ưu không gian sống cho gia đình bạn.</p>
+<div class="flex items-center gap-6">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="user avatar 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpUmMxKdzOaCr5K1JJgYBR_SuFqVqODmD7vku5kBdSfadAjW9XCtM-ogPSYDhULGZ_3DEE0Woa1Tpe5gUpgg5-TKQZfUbHjsfWHAaO0mWXOVwi6q_w3jGsFoU_ZpPCHbGXoSeIJ4Y2f2xlVh9JfuRa-IB3cmrNsOCwH0JALdBUmUmz24ZVqM8ATGxoUtLIGy5IlvgbS-5cjCbXbu9m0IPkuOp57dmR8i5Zr3zXnYmG1WV3wluasviqtZnZ9ASWlI1FywQg0nXOvw"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="user avatar 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBav1UPzf_Hv3_aPQIc1WutFxC07gFX73XDqLoAJ7QYptC0Of-GZbrqDqh12mWX0YyRsi-qM1v1NdECP2an4JsMNvl5U9X9w_ovni7ncpevf__JN_6yqvPFa2aBBsbW1gAJ_bERF3IqiGUriaUpVgJHQgJG6_BcnA-DjvoaazEEvmrJIq5052KDUO0Tfb08bIQNxYJMqcf2OThCtFnZ2KM9dIp7qUPobb6DXnsTh3gcZNqLWncdn54Larz-5eJ11zBb9sO_C7nEp14"/>
+<img class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="user avatar 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZA8xFMe6RlKJ9qLHx6xBjRnrmTZYE63jXqVDkquH-QhTzYIViM8EGyGPFnPwk5juPei6ryU0KTQD6aFAQ-q-SdcqaITAnaHLOp_ykHL3efCO-PXnYoKSOhqd2grzeuZdW4YDtD5XEwiYsuidr8LR-gwfLD4CoiToa5lVj57xb81WTW-LoOJdji3g7hmU6kMPinX3U9cYHfHPNa4N0yIX910rBsmvqgerrFcpkT6HFgnks6vC6f6NT2LS1hsiEhf7NiuxU5pqduT0"/>
+</div>
+<p class="text-sm text-stone-400">+50 yêu cầu tư vấn hôm nay</p>
+</div>
+</div>
+<div class="md:w-1/2 w-full">
+<div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary uppercase tracking-wider">Họ và tên</label>
+<input class="w-full bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 rounded-md py-4" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary uppercase tracking-wider">Số điện thoại</label>
+<input class="w-full bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 rounded-md py-4" placeholder="0901 234 567" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-primary uppercase tracking-wider">Nhu cầu của bạn</label>
+<select class="w-full bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 rounded-md py-4 text-stone-500">
+<option>Tư vấn nội thất phòng khách</option>
+<option>Tư vấn nội thất phòng ngủ</option>
+<option>Tư vấn phong thủy</option>
+<option>Thiết kế trọn gói</option>
+</select>
+</div>
+<button class="w-full py-4 bg-secondary text-white font-bold rounded-md text-lg hover:shadow-lg hover:shadow-secondary/30 transition-all transform active:scale-[0.98]">Nhận Tư Vấn Miễn Phí</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-xl font-serif text-[#442a22] dark:text-[#fcf9f4] mb-4 font-headline">Timeless Artisan</div>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">Đơn vị tiên phong trong sản xuất nội thất gỗ tự nhiên cao cấp tại Việt Nam. Mỗi sản phẩm là một tuyệt tác thủ công.</p>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-primary cursor-pointer hover:bg-secondary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-primary cursor-pointer hover:bg-secondary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-stone-200 flex items-center justify-center text-primary cursor-pointer hover:bg-secondary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">location_on</span>
+</div>
+</div>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Về chúng tôi</h5>
+<ul class="space-y-4 font-manrope text-sm leading-relaxed">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#442a22] hover:underline decoration-[#775a19] underline-offset-4 transition-opacity" href="#">Showroom</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#442a22] hover:underline decoration-[#775a19] underline-offset-4 transition-opacity" href="#">Nhà máy sản xuất</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#442a22] hover:underline decoration-[#775a19] underline-offset-4 transition-opacity" href="#">Tuyển dụng</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#442a22] hover:underline decoration-[#775a19] underline-offset-4 transition-opacity" href="#">Liên hệ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Chính sách</h5>
+<ul class="space-y-4 font-manrope text-sm leading-relaxed">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#442a22] hover:underline decoration-[#775a19] underline-offset-4 transition-opacity" href="#">Chính sách bảo hành</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#442a22] hover:underline decoration-[#775a19] underline-offset-4 transition-opacity" href="#">Vận chuyển</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-[#442a22] hover:underline decoration-[#775a19] underline-offset-4 transition-opacity" href="#">Bảo mật</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6">Đăng ký nhận tin</h5>
+<p class="text-stone-500 text-sm mb-4">Nhận cập nhật về bộ sưu tập mới nhất và ưu đãi đặc quyền.</p>
+<div class="flex">
+<input class="bg-white border-transparent focus:ring-secondary rounded-l-md w-full text-sm" placeholder="Email của bạn" type="email"/>
+<button class="bg-primary text-white px-4 rounded-r-md">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 mt-20 pt-8 border-t border-stone-200/50 text-center">
+<p class="text-stone-400 text-xs font-manrope">© 2024 Timeless Artisan Woodworking. Crafted with mastery.</p>
+</div>
+</footer>
+</body></html>
