@@ -1,0 +1,64 @@
+// ============================================================
+// FILE: Code.gs — Google Apps Script Nhận Dữ Liệu Chatbot Lead
+// PHIÊN BẢN 3: Đọc dữ liệu từ form submit (e.parameter)
+// ============================================================
+
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.openById('1L0fvMtksO89zWQiWc8s6qNSD93bWEEVWh9VcFzOcyIY').getActiveSheet();
+    
+    // Đọc từ form data (e.parameter) — tương thích với hidden form submit từ browser
+    var data = e.parameter || {};
+    
+    // Fallback: nếu không có e.parameter, thử parse JSON từ postData
+    if (!data.sessionId && e.postData && e.postData.contents) {
+      try { data = JSON.parse(e.postData.contents); } catch(err) {}
+    }
+    
+    var newTime = data.timestamp || new Date().toLocaleString('vi-VN');
+    var newName = data.name || '';
+    var newPhone = data.phone || '';
+    var newEmail = data.email || '';
+    var newSource = data.source || '';
+    var newSessionId = data.sessionId || '';
+    var newHistory = data.chatHistory || '';
+
+    var dataRange = sheet.getDataRange();
+    var values = dataRange.getValues();
+    var rowIndexToUpdate = -1;
+
+    // Tìm kiếm xem Session ID (Cột F - index 5) đã tồn tại chưa
+    if (newSessionId) {
+      for (var i = values.length - 1; i > 0; i--) { 
+        var rowSessionId = values[i][5] ? values[i][5].toString().trim() : '';
+        if (rowSessionId === newSessionId) {
+          rowIndexToUpdate = i + 1;
+          break;
+        }
+      }
+    }
+
+    if (rowIndexToUpdate > -1) {
+      var currentRow = values[rowIndexToUpdate - 1];
+      if (!currentRow[1] && newName) sheet.getRange(rowIndexToUpdate, 2).setValue(newName);
+      if (!currentRow[2] && newPhone) sheet.getRange(rowIndexToUpdate, 3).setValue(newPhone);
+      if (!currentRow[3] && newEmail) sheet.getRange(rowIndexToUpdate, 4).setValue(newEmail);
+      if (newHistory) sheet.getRange(rowIndexToUpdate, 7).setValue(newHistory);
+      sheet.getRange(rowIndexToUpdate, 1).setValue(newTime);
+    } else {
+      sheet.appendRow([newTime, newName, newPhone, newEmail, newSource, newSessionId, newHistory]);
+    }
+    
+    return ContentService.createTextOutput(JSON.stringify({ status: 'success' })).setMimeType(ContentService.MimeType.JSON);
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: error.toString() })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doGet(e) {
+  // Cũng hỗ trợ GET (backup)
+  if (e && e.parameter && e.parameter.sessionId) {
+    return doPost(e);
+  }
+  return ContentService.createTextOutput("API Chatbot Leads dang hoat dong! ✅");
+}
