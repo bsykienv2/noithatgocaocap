@@ -590,25 +590,38 @@ Hãy cho tôi biết bạn đang cần sản phẩm như thế nào?`;
         let currentSystemPrompt = "";
         let messageHistory = [];
         
-        // Khởi tạo lấy dữ liệu từ file chatbot_data.txt
+        // Khởi tạo lấy dữ liệu từ file chatbot_data.txt và san_pham_noi_that.md
         async function initChatbotAPI() {
             try {
-                const response = await fetch("./chatbot_data.txt");
+                const [personaRes, productRes] = await Promise.all([
+                    fetch("./chatbot_data.txt"),
+                    fetch("./san_pham_noi_that.md")
+                ]);
+
                 let knowledgeBase = "";
-                if (response.ok) {
-                    knowledgeBase = await response.text();
+                
+                if (personaRes.ok) {
+                    const personaText = await personaRes.text();
+                    knowledgeBase += "--- THÔNG TIN CHUYÊN GIA ---\n" + personaText + "\n\n";
                 } else {
-                    console.error("Không tải được cơ sở dữ liệu cho chatbot!");
+                    console.error("Không tải được chatbot_data.txt");
                 }
 
-                currentSystemPrompt = `Bạn là AI trợ lý cá nhân độc quyền trên website của chuyên gia [Sỹ Kiên - Tư vấn bán hàng].\nNhiệm vụ của bạn là hỗ trợ khách truy cập lịch sự, cung cấp thông tin chính xác về các dịch vụ, khóa học, và dự án của chuyên gia này.\n\nDưới đây là cơ sở dữ liệu kiến thức (Knowledge Base) của bạn:\n${knowledgeBase}\n\nQuy tắc giao tiếp bắt buộc:\n1. Luôn chào hỏi thân thiện và kết thúc bằng cách mời họ đặt thêm câu hỏi.\n2. Bạn phải định dạng các câu trả lời của mình bằng Markdown đầy đủ (in đậm ý chính, dùng gạch đầu dòng, tạo code block nếu cần).\n3. Nếu người dùng hỏi điều gì ngoài phạm vi dữ liệu trên, hãy tế nhị từ chối và hướng dẫn họ gửi email hoặc nhắn tin Zalo trực tiếp cho chuyên gia.\n4. Không được phép bịa đặt thông tin ngoài cơ sở dữ liệu đã cấp.`;
+                if (productRes.ok) {
+                    const productText = await productRes.text();
+                    knowledgeBase += "--- DANH MỤC SẢN PHẨM ---\n" + productText;
+                } else {
+                    console.error("Không tải được san_pham_noi_that.md");
+                }
+
+                currentSystemPrompt = `Bạn là AI trợ lý cá nhân độc quyền trên website của chuyên gia [Sỹ Kiên - Tư vấn bán hàng].\nNhiệm vụ của bạn là hỗ trợ khách truy cập lịch sự, tư vấn bán hàng dựa trên cơ sở dữ liệu sản phẩm dưới đây.\n\nDưới đây là cơ sở dữ liệu kiến thức (Knowledge Base) của bạn:\n${knowledgeBase}\n\nQuy tắc giao tiếp bắt buộc:\n1. Giọng điệu thân thiện, tự tin, mang phong cách của một tư vấn viên nội thất cao cấp. Hỗ trợ khách chọn sản phẩm phù hợp.\n2. Bạn phải định dạng các câu trả lời của mình bằng Markdown đầy đủ (in đậm ý chính, dùng gạch đầu dòng).\n3. Nếu người dùng hỏi điều gì ngoài phạm vi dữ liệu trên, hãy tế nhị từ chối và hướng dẫn họ gửi email hoặc nhắn tin Zalo trực tiếp cho chuyên gia.\n4. Không được phép bịa đặt thông tin, giá bán hay chi tiết kỹ thuật ngoài cơ sở dữ liệu đã đề cập phía trên.`;
                 
                 // Khởi tạo mảng hội thoại với role: system
                 messageHistory = [
                     { role: "system", content: currentSystemPrompt }
                 ];
             } catch (error) {
-                console.error("Lỗi khi fetch chatbot_data.txt:", error);
+                console.error("Lỗi khi fetch dữ liệu chatbot:", error);
             }
         }
         
