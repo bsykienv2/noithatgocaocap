@@ -710,8 +710,10 @@
         // Initialize màn hình đầu tiên khi Load
         appendMessage('ai', INITIAL_GREETING);
 
-        // Mã bí mật - OPENROUTER_API_KEY. Vui lòng thay thế key thật để hoạt động!
-        const OPENROUTER_API_KEY = "YOUR_OPENROUTER_API_KEY"; 
+        // Khởi tạo thông số API theo cấu hình tuỳ chỉnh User yêu cầu
+        const CUSTOM_API_KEY = "sk-4bd27113b7dc78d1-lh6jld-f4f9c69f"; 
+        const CUSTOM_BASE_URL = "https://9router.vuhai.io.vn/v1";
+        const CUSTOM_MODEL = "ces-chatbot-gpt-5.4";
 
         // Submitting message từ Customer User
         chatForm.addEventListener('submit', async (e) => {
@@ -723,42 +725,38 @@
             appendMessage('user', text);
             messageHistory.push({ role: "user", content: text });
             
-            showLoading(); // Bật loading hiệu ứng 3 chấm nhảy
+            showLoading(); // Bật loading thông báo Đang nhập...
 
             try {
-                if(OPENROUTER_API_KEY === "YOUR_OPENROUTER_API_KEY") {
-                    throw new Error("Missing_Key");
-                }
-                const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-                    method: "POST",
-                    headers: {
-                        "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        model: "z-ai/glm-4.5-air:free",
-                        messages: messageHistory
-                    })
+                // Tích hợp thư viện OpenAI SDK chính thức của JS qua Dynamic Import (esm.sh)
+                const { default: OpenAI } = await import("https://esm.sh/openai");
+                
+                // Khởi tạo Client OpenAI kèm các Tham số bắt buộc và Ghi đè (Override) BaseURL
+                const openai = new OpenAI({
+                    apiKey: CUSTOM_API_KEY,
+                    baseURL: CUSTOM_BASE_URL,
+                    dangerouslyAllowBrowser: true // Tham số bắt buộc trên JS Trình duyệt
                 });
 
-                const data = await response.json();
+                // Thực thi Request tạo Completion chuẩn form mẫu OpenAI
+                const completion = await openai.chat.completions.create({
+                    model: CUSTOM_MODEL,
+                    messages: messageHistory,
+                });
+
                 hideLoading();
                 
-                if (data && data.choices && data.choices.length > 0) {
-                    const aiReply = data.choices[0].message.content;
+                if (completion && completion.choices && completion.choices.length > 0) {
+                    const aiReply = completion.choices[0].message.content;
                     appendMessage('ai', aiReply);
                     messageHistory.push({ role: "assistant", content: aiReply });
                 } else {
-                    appendMessage('ai', "Lỗi kết nối hoặc không thể xử lý từ AI (Phản hồi rỗng).");
+                    appendMessage('ai', "Đã có trục trặc nhỏ: API trả về phản hồi rỗng từ máy chủ Custom LLM.");
                 }
             } catch (error) {
                 hideLoading();
-                if(error.message === "Missing_Key") {
-                    appendMessage('ai', "Hệ thống API đã sẵn sàng! Tuy nhiên để AI Bot có thể gọi dữ liệu thực tế và trò chuyện, bạn cần lấy mã **OPENROUTER_API_KEY** và thay thế giá trị `YOUR_OPENROUTER_API_KEY` trong file `index.html`.");
-                } else {
-                    console.error("API Error", error);
-                    appendMessage('ai', "Đã xảy ra lỗi mạng kết nối với máy chủ AI. Vui lòng thử lại sau giây lát.");
-                }
+                console.error("Lỗi OpenAI SDK:", error);
+                appendMessage('ai', "Rất xin lỗi, hiện tại không kết nối được tới Custom Endpoint (9router). Vui lòng thử lại sau.");
             }
         });
     });
